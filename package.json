@@ -1,7 +1,6 @@
 {
   "name": "ferrari-2.0",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
@@ -12,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.26.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matananh/projeto_ferrari.git"
+  },
+  "bugs": {
+    "url": "https://github.com/matananh/projeto_ferrari/issues"
+  },
+  "homepage": "https://github.com/matananh/projeto_ferrari#readme",
+  "description": ""
 }
