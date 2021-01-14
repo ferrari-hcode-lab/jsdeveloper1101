@@ -85,7 +85,7 @@
   </head>
   <body class="">
     <header id="header">
-      <div class="overlay"></div>
+      <div class="overlay" data-close="menu"></div>
       <a href="index.html#home"
         ><img
           src="assets/images/ferrari-logo.svg"
@@ -114,9 +114,9 @@
           />
         </svg>
       </button>
-      <div class="menu logged">
+      <div class="menu">
         <nav>
-          <button type="button" id="btn-close">
+          <button type="button" id="btn-close" data-close="menu">
             <svg
               id="close-24px"
               xmlns="http://www.w3.org/2000/svg"
@@ -257,9 +257,10 @@
           </ul>
         </div>
         <form action="schedules-time-options.html">
+          <input type="hidden" name="schedule_at" />
           <footer class="fixed">
             <a href="schedules.html">Voltar</a>
-            <button type="submit">Continuar</button>
+            <button type="submit" disabled="disabled">Continuar</button>
           </footer>
         </form>
       </main>

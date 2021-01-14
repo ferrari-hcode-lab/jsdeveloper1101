@@ -85,7 +85,7 @@
   </head>
   <body class="" id="mobile">
     <header id="header" class="">
-      <div class="overlay"></div>
+      <div class="overlay" data-close="menu"></div>
       <a href="index.html#home"
         ><img
           src="assets/images/ferrari-logo.svg"
@@ -116,7 +116,7 @@
       </button>
       <div class="menu logged">
         <nav>
-          <button type="button" id="btn-close">
+          <button type="button" id="btn-close" data-close="menu">
             <svg
               id="close-24px"
               xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +240,7 @@
               </div>
 
               <footer class="fixed">
-                <a href="schedules-services.html">Voltar</a>
+                <a href="javascript:history.back(-1)">Voltar</a>
                 <button type="submit">Continuar</button>
               </footer>
             </div>

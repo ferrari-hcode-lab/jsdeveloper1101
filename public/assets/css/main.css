@@ -271,6 +271,16 @@ form button:hover {
 form button:active {
   background-color: var(--black-75);
 }
+form button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+form button:disabled:hover, form button:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
 form button:hover {
   background-color: var(--green-hover);
 }
@@ -400,6 +410,16 @@ header.page-title hr {
 .page aside footer button:active {
   background-color: var(--black-75);
 }
+.page aside footer button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+.page aside footer button:disabled:hover, .page aside footer button:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
 .page aside footer button svg {
   transform: rotate(0deg);
   transition: all 0.3s ease-in-out;
@@ -486,6 +506,16 @@ header.page-title hr {
 .page footer.fixed button:active, .page footer.fixed a:active {
   background-color: var(--black-75);
 }
+.page footer.fixed button:disabled, .page footer.fixed a:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+.page footer.fixed button:disabled:hover, .page footer.fixed button:disabled:active, .page footer.fixed a:disabled:hover, .page footer.fixed a:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
 .page footer.fixed button:hover, .page footer.fixed a:hover {
   background-color: var(--gray-3);
 }
@@ -516,6 +546,16 @@ header.page-title hr {
 }
 .page footer.fixed button[type=submit]:active, .page footer.fixed a.black:active {
   background-color: var(--black-75);
+}
+.page footer.fixed button[type=submit]:disabled, .page footer.fixed a.black:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+.page footer.fixed button[type=submit]:disabled:hover, .page footer.fixed button[type=submit]:disabled:active, .page footer.fixed a.black:disabled:hover, .page footer.fixed a.black:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
 }
 .page footer.fixed button[type=submit]:hover, .page footer.fixed a.black:hover {
   background-color: var(--black-hover);
@@ -551,6 +591,16 @@ header.page-title hr {
 .page.blue footer.fixed button[type=submit]:active, .page.blue footer.fixed a.black:active {
   background-color: var(--black-75);
 }
+.page.blue footer.fixed button[type=submit]:disabled, .page.blue footer.fixed a.black:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+.page.blue footer.fixed button[type=submit]:disabled:hover, .page.blue footer.fixed button[type=submit]:disabled:active, .page.blue footer.fixed a.black:disabled:hover, .page.blue footer.fixed a.black:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
 .page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
   background-color: var(--blue-hover);
 }
@@ -584,6 +634,16 @@ header.page-title hr {
 }
 .page.green footer.fixed button[type=submit]:active, .page.green footer.fixed a.black:active {
   background-color: var(--black-75);
+}
+.page.green footer.fixed button[type=submit]:disabled, .page.green footer.fixed a.black:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+.page.green footer.fixed button[type=submit]:disabled:hover, .page.green footer.fixed button[type=submit]:disabled:active, .page.green footer.fixed a.black:disabled:hover, .page.green footer.fixed a.black:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
 }
 .page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
   background-color: var(--green-hover);
@@ -689,6 +749,16 @@ header.page-title hr {
 }
 .calendar .month button:active {
   background-color: var(--black-75);
+}
+.calendar .month button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+.calendar .month button:disabled:hover, .calendar .month button:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
 }
 .calendar .month nav button {
   min-width: 50px;
@@ -926,6 +996,16 @@ header.page-title hr {
 }
 #header .menu .btn-register:active {
   background-color: var(--black-75);
+}
+#header .menu .btn-register:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+#header .menu .btn-register:disabled:hover, #header .menu .btn-register:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
 }
 #header .menu .btn-register:hover {
   background-color: var(--green-hover);
@@ -1195,6 +1275,16 @@ header.page-title hr {
 #home > header a:active {
   background-color: var(--black-75);
 }
+#home > header a:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+#home > header a:disabled:hover, #home > header a:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
 #home > header a:houver {
   background-color: var(--white);
   color: var(--black);
@@ -1329,6 +1419,16 @@ header.page-title hr {
 }
 #service > div a:active {
   background-color: var(--black-75);
+}
+#service > div a:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+#service > div a:disabled:hover, #service > div a:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
 }
 #service > div a:hover {
   background-color: var(--green-hover);
@@ -1735,6 +1835,16 @@ header.page-title hr {
 #schedules main > div ul li button:active {
   background-color: var(--black-75);
 }
+#schedules main > div ul li button:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+#schedules main > div ul li button:disabled:hover, #schedules main > div ul li button:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
 #schedules main > div ul li button:hover {
   background-color: var(--red-hover);
 }
@@ -1829,6 +1939,16 @@ header.page-title hr {
 #schedules-times-options .options label span:active {
   background-color: var(--black-75);
 }
+#schedules-times-options .options label span:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+#schedules-times-options .options label span:disabled:hover, #schedules-times-options .options label span:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
 #schedules-times-options .options label span:hover {
   background-color: var(--gray-3);
 }
@@ -1862,6 +1982,16 @@ header.page-title hr {
 }
 #schedules-times-options .options label input:checked + span:active {
   background-color: var(--black-75);
+}
+#schedules-times-options .options label input:checked + span:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+#schedules-times-options .options label input:checked + span:disabled:hover, #schedules-times-options .options label input:checked + span:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
 }
 #schedules-times-options .options label input:checked + span:hover {
   background-color: var(--blue-hover);
@@ -2081,6 +2211,16 @@ header.page-title hr {
 }
 #schedules-payment-made main footer > a:active {
   background-color: var(--black-75);
+}
+#schedules-payment-made main footer > a:disabled {
+  opacity: 0.5;
+  cursor: no-drop;
+  background-color: var(--gray-3);
+  color: var(--dark-0);
+}
+#schedules-payment-made main footer > a:disabled:hover, #schedules-payment-made main footer > a:disabled:active {
+  background-color: var(--gray-3);
+  color: var(--dark-0);
 }
 #schedules-payment-made main footer > a:hover {
   background-color: var(--green-hover);

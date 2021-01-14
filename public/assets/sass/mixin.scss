@@ -20,6 +20,17 @@
   &:active {
     background-color: var(--black-75);
   }
+  &:disabled {
+    opacity: 0.5;
+    cursor: no-drop;
+    background-color: var(--gray-3);
+    color: var(--dark-0);
+    &:hover,
+    &:active {
+      background-color: var(--gray-3);
+      color: var(--dark-0);
+    }
+  }
 }
 
 @mixin button-green {

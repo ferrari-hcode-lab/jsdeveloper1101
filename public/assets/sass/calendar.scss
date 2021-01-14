@@ -18,7 +18,7 @@
       border-radius: var(--border-radius);
       color: var(--gray-2);
     }
-    nav{
+    nav {
       button {
         min-width: 50px;
       }
@@ -30,7 +30,7 @@
       display: none;
     }
   }
-  ul{
+  ul {
     margin: 0;
     padding: 0;
   }
@@ -61,7 +61,7 @@
       font-size: 16px;
       border-radius: 50%;
       cursor: pointer;
-      transition: all .1s ease-in-out;
+      transition: all 0.1s ease-in-out;
       &:hover {
         background-color: var(--gray-7);
       }
@@ -72,7 +72,7 @@
           background-color: var(--blue-hover);
         }
         &:active {
-          background-color: var(--blue-active);;
+          background-color: var(--blue-active);
         }
       }
       &.selected {
@@ -82,10 +82,11 @@
           background-color: var(--green-hover);
         }
         &:active {
-          background-color: var(--green-active);;
+          background-color: var(--green-active);
         }
       }
-      &.month-prev, &.month-next {
+      &.month-prev,
+      &.month-next {
         color: var(--gray-2);
       }
     }
