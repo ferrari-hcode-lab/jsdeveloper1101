@@ -1,9 +1,10 @@
 .alert {
   position: relative;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: var(--border-radius);
+  display: none;
   &.sucess {
     color: var(--sucess-color);
     border-color: var(--sucess-border);

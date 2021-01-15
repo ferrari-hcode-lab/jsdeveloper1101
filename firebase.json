@@ -1,10 +1,13 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
+  "apiKey": "AIzaSyDHPcFQdl_bXMN5YwC58Ch6ITSpDGPh4Ys",
+  "authDomain": "projeto-ferrari-davimatana.firebaseapp.com",
+  "projectId": "projeto-ferrari-davimatana",
+  "storageBucket": "projeto-ferrari-davimatana.appspot.com",
+  "messagingSenderId": "434675321362",
+  "appId": "1:434675321362:web:75e4e4642423e9a43726cb",
+  "measurementId": "G-P2SWEWD132"
 }

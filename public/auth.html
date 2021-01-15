@@ -110,13 +110,7 @@
           <hr />
 
           <div class="field">
-            <input
-              type="email"
-              name="email"
-              id="email-login"
-              readonly
-              value="matananh@gmail.com"
-            />
+            <input type="email" name="email" id="email-login" />
             <label for="email-login">E-mail:</label>
           </div>
           <div class="field">
@@ -124,10 +118,13 @@
             <label for="password">Senha:</label>
           </div>
 
+          <div class="alert danger"></div>
+
           <div class="actions">
             <div>
-              <a href="auth.html#forget" class="link">Esqueceu sua Senha</a>
-              <a href="auth.html" class="link">Este não é o seu e-mail?</a>
+              <a href="auth.html#forget" class="link">Esqueceu sua Senha?</a>
+              <a href="auth.html#register" class="link">Criar uma conta</a>
+              <!-- <a href="auth.html" class="link">Este não é o seu e-mail?</a> -->
             </div>
             <button type="submit">Login</button>
           </div>
@@ -138,12 +135,7 @@
           <hr />
 
           <div class="field">
-            <input
-              type="email"
-              name="email"
-              id="email-register"
-              value="matananh@gmail.com"
-            />
+            <input type="email" name="email" id="email-register" />
             <label for="email-register">E-mail:</label>
           </div>
           <div class="field">
@@ -155,7 +147,7 @@
             <label for="birth_at">Data de Nascimento:</label>
           </div>
           <div class="field">
-            <input type="password" name="password-new" id="password-new" />
+            <input type="password" name="password" id="password-new" />
             <label for="password-new">Crie uma Senha:</label>
           </div>
           <div class="field">
@@ -166,6 +158,8 @@
             />
             <label for="password-confirm">Confirme a Senha:</label>
           </div>
+
+          <div class="alert danger"></div>
 
           <div class="actions">
             <a href="auth.html#login" class="link">Já tenho uma conta?</a>
@@ -198,9 +192,11 @@
           <hr />
 
           <div class="field">
-            <input type="password" name="password-reset" id="password-reset" />
+            <input type="password" name="password" id="password-reset" />
             <label for="password-reset">Crie uma Nova Senha</label>
           </div>
+
+          <div class="alert danger"></div>
 
           <div class="actions">
             <button type="submit">Redefinir</button>
