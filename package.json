@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
-    "sass-build": "sass public/assets/sass/main.scss:public/assets/css/main-min.css --style=compressed",
+    "sass-build": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
     "build": "webpack --mode=production",
     "dev": "webpack serve --watch --content-base public --hot"
   },
