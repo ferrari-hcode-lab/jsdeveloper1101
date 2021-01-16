@@ -20,12 +20,12 @@ if (btnLogout) {
 if (menu) {
   auth.onAuthStateChanged((user) => {
     if (user) {
-      const userElement = menu.querySelector(".footer > div > div");
+      const userElement = menu.querySelector(".login-user > a");
 
       userElement.querySelector("strong").innerHTML = user.displayName;
       userElement.querySelector("small").innerHTML = user.email;
 
-      menu.classList.add("Logged");
+      menu.classList.add("logged");
     } else {
       menu.classList.remove("logged");
     }
