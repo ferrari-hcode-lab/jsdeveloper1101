@@ -5,9 +5,9 @@
 
   <testsuite name="register"
     errors="0" failures="0" hostname="" id="" package="register" skipped="0"
-    tests="3" time="13.74" timestamp="">
+    tests="3" time="16.40" timestamp="">
   
-    <testcase name="PASSO 1: Acessar a página de autenticação" classname="register" time="2.864" assertions="3">
+    <testcase name="PASSO 1: Acessar a página de autenticação" classname="register" time="3.501" assertions="3">
 
     
 
@@ -16,7 +16,7 @@
     
     </testcase>
   
-    <testcase name="PASSO 2: Tentar fazer cadastro" classname="register" time="5.117" assertions="4">
+    <testcase name="PASSO 2: Tentar fazer cadastro" classname="register" time="5.911" assertions="4">
 
     
 
@@ -27,7 +27,7 @@
     
     </testcase>
   
-    <testcase name="PASSO 3: Veificar se autenticou após o cadastro" classname="register" time="5.758" assertions="4">
+    <testcase name="PASSO 3: Veificar se autenticou após o cadastro" classname="register" time="6.989" assertions="4">
 
     
 

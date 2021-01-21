@@ -1,23 +1,29 @@
-01:21:05.315 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
-01:21:05.406 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
-2021-01-16 01:21:05.487:INFO::main: Logging initialized @439ms to org.seleniumhq.jetty9.util.log.StdErrLog
-01:21:05.799 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
-01:21:05.981 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
-01:21:17.670 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+19:18:48.954 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+19:18:49.068 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2021-01-19 19:18:49.203:INFO::main: Logging initialized @1187ms to org.seleniumhq.jetty9.util.log.StdErrLog
+19:18:49.576 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+19:18:49.828 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+19:19:05.050 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "acceptSslCerts": true,
   "browserName": "firefox",
+  "javascriptEnabled": true,
+  "marionette": true,
   "name": "Register"
 }
-01:21:17.674 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
-1610770877736	geckodriver	INFO	Listening on 127.0.0.1:8761
-1610770878597	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\matan\\AppData\\Local\\Temp\\rust_mozprofileJJk8So"
+19:19:05.055 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1611094745273	geckodriver	INFO	Listening on 127.0.0.1:49043
+1611094746185	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\matan\\AppData\\Local\\Temp\\rust_mozprofileQJ6Mv4"
 Can't find symbol 'eglSwapBuffersWithDamageEXT'.
 Can't find symbol 'eglSetDamageRegionKHR'.
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1610770885322	Marionette	INFO	Listening on port 53893
-01:21:26.016 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
-01:21:26.107 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session b63eab3c-ecf0-41d1-a4db-bf646ebba960 (org.openqa.selenium.firefox.GeckoDriverService)
-1610770897813	Marionette	INFO	Stopped listening on port 53893
+1611094754067	Marionette	INFO	Listening on port 65052
+19:19:14.290 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+19:19:14.382 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session a8fb1b0d-1708-4e10-a0b5-1590648160e6 (org.openqa.selenium.firefox.GeckoDriverService)
+1611094768050	Marionette	INFO	Stopped listening on port 65052
+
+###!!! [Child][MessageChannel] Error: (msgtype=0xB60006,name=PWebSocket::Msg_DeleteSelf) Channel closing: too late to send/recv, messages will be lost
+
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
-01:21:39.871 INFO [ActiveSessions$1.onStop] - Removing session b63eab3c-ecf0-41d1-a4db-bf646ebba960 (org.openqa.selenium.firefox.GeckoDriverService)
+19:19:30.896 INFO [ActiveSessions$1.onStop] - Removing session a8fb1b0d-1708-4e10-a0b5-1590648160e6 (org.openqa.selenium.firefox.GeckoDriverService)

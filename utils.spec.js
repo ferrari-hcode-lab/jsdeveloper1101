@@ -1,4 +1,4 @@
-const { appendTemplate, getQueryString } = require("../utils");
+const { appendTemplate, getQueryString } = require("./utils");
 
 it(`Should create and add an element`, () => {
   const mainElement = document.createElement("main");
