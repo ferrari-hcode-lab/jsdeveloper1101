@@ -26,7 +26,7 @@ export function getQueryString() {
 
 export function setFormValues(form, values) {
   Object.keys(values).forEach((key) => {
-    const field = form.querySelectorAll(`[name=${key}]`);
+    const field = form.querySelector(`[name=${key}]`);
 
     switch (field.type) {
       case "select":
@@ -97,4 +97,11 @@ export function formatCurrency(value) {
     style: "currency",
     currency: "BRL",
   });
+}
+
+export function onSnapshotError(err) {
+  const pathname = encodeURIComponent(window.location.pathname);
+  const search = encodeURIComponent(window.location.search);
+
+  window.location.href = `/auth.html?url=${pathname}${search}`;
 }

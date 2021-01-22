@@ -4,6 +4,7 @@ import {
   appendTemplate,
   formatCurrency,
   getQueryString,
+  onSnapshotError,
   setFormValues,
 } from "./utils";
 
@@ -46,22 +47,6 @@ const renderServivesOptions = (context, serviceOptions) => {
           return Number(id) !== Number(value);
         });
       }
-
-      const result = serviceSumarry.map(
-        (id) => serviceOptions.filter((item) => +item.id === +id)[0]
-      );
-
-      console.log(
-        result.sort((a, b) => {
-          if (a.name > b.name) {
-            return 1;
-          } else if (a.name < b.name) {
-            return -1;
-          } else {
-            return 0;
-          }
-        })
-      );
 
       renderServiceSummary(context, serviceOptions);
     });
@@ -114,16 +99,13 @@ document.querySelectorAll("#schedules-services").forEach((page) => {
     const services = [];
     snapshot.forEach((item) => {
       services.push(item.data());
-    });
+    }, onSnapshotError);
 
     renderServivesOptions(page, services);
     renderServiceSummary(page, services);
   });
   const params = getQueryString();
-  const title = page.querySelector("h3");
   const form = page.querySelector("form");
-  const scheduleAt = parse(params.schedule_at, "yyyy-MM-dd", new Date());
-  const hoursAt = parse(params.option, "HH:mm", new Date());
 
   console.log(params);
 
@@ -134,11 +116,4 @@ document.querySelectorAll("#schedules-services").forEach((page) => {
   buttonSummary.addEventListener("click", () => {
     page.querySelector("aside").classList.toggle("open");
   });
-
-  title.innerHTML =
-    format(scheduleAt, "EEEE, d 'de' MMMM 'de' yyyy", {
-      locale: ptBR,
-    }) +
-    "às: " +
-    format(hoursAt, "HH:mm");
 });
