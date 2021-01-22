@@ -115,7 +115,11 @@ if (authPage) {
         const values = getQueryString();
 
         if (values.url) {
-          window.location.href = `http://localhost:8080${values.url}`;
+          if (window.location.hostname === "localhost") {
+            window.location.href = `http://localhost:8080${values.url}`;
+          } else {
+            window.location.href = `https://projeto-ferrari-davimatana.web.app${values.url}`;
+          }
         } else {
           window.location.href = "/";
         }
@@ -178,9 +182,7 @@ if (authPage) {
     auth
       .verifyPasswordResetCode(oobCode)
       .then(() => auth.confirmPasswordReset(oobCode, password))
-      .then(() => {
-        window.location.href = "/auth.html";
-      })
+      .then(() => showAuthForm("login"))
       .catch(showAlertError(formReset))
       .finally(() => {
         btnSubmit.disabled = false;
