@@ -1,5 +1,20 @@
 #schedules-payment {
   position: relative;
+  &.keyboard-open {
+    margin-bottom: 0;
+    height: calc(100vh - 60px);
+    footer {
+      position: static;
+      width: 100vw;
+      margin-left: -20px;
+    }
+  }
+  .name {
+    text-transform: uppercase;
+    &tspan {
+      text-transform: uppercase;
+    }
+  }
   > header {
     height: 260px;
     min-height: 260px;
@@ -17,13 +32,13 @@
         .form-fields {
           flex-direction: column;
           width: 100%;
-            .fields {
-              flex-direction: row;
-              justify-content: space-between;
-              .field {
-                width: calc(50% - calc(var(--space) / 2));
-              }
+          .fields {
+            flex-direction: row;
+            justify-content: space-between;
+            .field {
+              width: calc(50% - calc(var(--space) / 2));
             }
+          }
         }
         .form-card {
           position: absolute;
@@ -34,7 +49,7 @@
           perspective: 1000px;
           .faces {
             transform-style: preserve-3d;
-            transition: transform .6s;
+            transition: transform 0.6s;
             width: 300px;
             &.flipped {
               transform: rotateY(180deg);
@@ -83,7 +98,7 @@
             position: static;
             justify-content: center;
             padding-left: var(--space);
-            .faces{
+            .faces {
               width: 100%;
               margin-top: -17px;
               &.flipped {

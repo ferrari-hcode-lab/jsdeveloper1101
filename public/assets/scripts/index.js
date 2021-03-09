@@ -1,5 +1,9 @@
-import "./main";
 import "./auth";
+import "./main";
 import "./calendar";
 import "./time-options";
 import "./services";
+import "./creditcard";
+import "./zipcode";
+import "./change-photo";
+import "./change-password";

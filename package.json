@@ -6,7 +6,7 @@
     "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
     "sass-build": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
     "build": "webpack --mode=production",
-    "dev": "webpack serve --watch --content-base public --hot",
+    "dev": "webpack serve --content-base public --hot",
     "test": "jest",
     "chrome": "nightwatch -e chrome",
     "firefox": "nightwatch -e firefox",
@@ -15,18 +15,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "chromedriver": "^87.0.5",
-    "faker": "^5.1.0",
-    "geckodriver": "^1.21.1",
-    "nightwatch": "^1.5.1",
-    "sass": "^1.26.10",
-    "selenium-server": "^3.141.59",
-    "webdriver-manager": "^12.1.8",
-    "webpack": "^5.13.0",
-    "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matananh/projeto_ferrari.git"
@@ -36,9 +24,18 @@
   },
   "homepage": "https://github.com/matananh/projeto_ferrari#readme",
   "description": "",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "sass": "^1.32.4",
+    "webpack": "^5.13.0",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  },
   "dependencies": {
+    "axios": "^0.21.1",
+    "cropperjs": "^1.5.9",
     "date-fns": "^2.16.1",
     "firebase": "^8.2.3",
-    "jest": "^26.6.3"
+    "imask": "^6.0.5"
   }
 }

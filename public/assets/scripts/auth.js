@@ -131,17 +131,15 @@ if (authPage) {
 
   formForget.addEventListener("submit", (e) => {
     e.preventDefault();
+    hideAlertError(formForget);
 
+    const values = getFormValues(formForget);
     const btnSubmit = formForget.querySelector("[type=submit]");
     const message = formForget.querySelector(".message");
     const field = formForget.querySelector(".field");
     const actions = formForget.querySelector(".actions");
 
-    hideAlertError(formForget);
-
-    const values = getFormValues(formForget);
-
-    message.getElementsByClassName.display = "none";
+    message.style.display = "none";
 
     btnSubmit.disabled = true;
     btnSubmit.innerHTML = "Enviando...";
@@ -151,7 +149,7 @@ if (authPage) {
       .then(() => {
         field.style.display = "none";
         actions.style.display = "none";
-        message.style.display = "block";
+        message.style.display = "flex";
       })
       .catch((error) => {
         field.style.display = "block";
@@ -182,7 +180,10 @@ if (authPage) {
     auth
       .verifyPasswordResetCode(oobCode)
       .then(() => auth.confirmPasswordReset(oobCode, password))
-      .then(() => showAuthForm("login"))
+      .then(() => {
+        hideAuthForms();
+        showAuthForm("login");
+      })
       .catch(showAlertError(formReset))
       .finally(() => {
         btnSubmit.disabled = false;

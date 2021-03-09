@@ -195,10 +195,14 @@
 
       <main>
         <form action="schedules-summary.html">
+          <input type="hidden" name="schedule_at" />
+          <input type="hidden" name="option" />
+          <input type="hidden" name="service" />
+
           <div class="form-creditcard">
             <div class="form-fields">
               <div class="field">
-                <input type="number" name="number" id="number" required />
+                <input type="text" name="number" id="number" required />
                 <label for="number">Número do Cartão</label>
               </div>
 

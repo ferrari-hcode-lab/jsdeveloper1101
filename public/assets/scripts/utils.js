@@ -35,13 +35,14 @@ export function setFormValues(form, values) {
 
       case "checbox":
       case "radio":
-        field.querySelector(
+        form.querySelector(
           `[name=${key}][value=${values[key]}]`
         ).checked = true;
         break;
 
       default:
         field.value = values[key];
+        break;
     }
   });
 }
@@ -104,4 +105,13 @@ export function onSnapshotError(err) {
   const search = encodeURIComponent(window.location.search);
 
   window.location.href = `/auth.html?url=${pathname}${search}`;
+}
+
+export function getQueryStringFromJSON(json) {
+  const params = [];
+
+  Object.keys(json).forEach((key) => {
+    params.push(`${key}=${json[key]}`);
+  });
+  return params.join("&");
 }

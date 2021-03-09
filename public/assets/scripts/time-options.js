@@ -1,12 +1,12 @@
 import { format, parse } from "date-fns";
+import { ptBR } from "date-fns/locale";
+import firebase from "./firebase-app";
 import {
   appendTemplate,
   getQueryString,
   onSnapshotError,
   setFormValues,
 } from "./utils";
-import firebase from "./firebase-app";
-import { ptBR } from "date-fns/locale";
 
 const renderTimeOptions = (context, timeOptions) => {
   const targetElement = context.querySelector(".options");
@@ -76,7 +76,10 @@ document.querySelectorAll("#schedules-times-options").forEach((page) => {
   const form = page.querySelector("form");
   const scheduleAt = parse(params.schedule_at, "yyyy-MM-dd", new Date());
 
-  console.log(scheduleAt);
+  if (scheduleAt.toString() === "Invalid Date") {
+    window.location.href = "/";
+  }
+  //console.log(scheduleAt);
 
   //page.querySelector("[name=schedule_at]").value = params.schedule_at;
   setFormValues(form, params);

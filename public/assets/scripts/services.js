@@ -1,9 +1,10 @@
-import { format } from "date-fns";
 import firebase from "./firebase-app";
 import {
   appendTemplate,
   formatCurrency,
+  getFormValues,
   getQueryString,
+  getQueryStringFromJSON,
   onSnapshotError,
   setFormValues,
 } from "./utils";
@@ -99,15 +100,12 @@ document.querySelectorAll("#schedules-services").forEach((page) => {
     const services = [];
     snapshot.forEach((item) => {
       services.push(item.data());
-    }, onSnapshotError);
-
+    });
     renderServivesOptions(page, services);
-    renderServiceSummary(page, services);
-  });
+  }, onSnapshotError);
+
   const params = getQueryString();
   const form = page.querySelector("form");
-
-  console.log(params);
 
   setFormValues(form, params);
 
@@ -115,5 +113,14 @@ document.querySelectorAll("#schedules-services").forEach((page) => {
 
   buttonSummary.addEventListener("click", () => {
     page.querySelector("aside").classList.toggle("open");
+  });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const values = getFormValues(form);
+
+    window.location.href = `/schedules-payment.html?
+    ${getQueryStringFromJSON(values)}`;
   });
 });

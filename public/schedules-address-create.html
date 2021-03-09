@@ -3,7 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conheça a Ferrari Auto Center" />
     <title>Ferrari - Hcode Lab</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/images/ferrari-logo.svg"
+    />
+    <link rel="alternate icon" href="assets/images/ferrari-logo.ico" />
+    <meta name="theme-color" content="#eceae7" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -73,24 +82,21 @@
       sizes="16x16"
       href="assets/images/favicon-16x16.png"
     />
-    <link rel="manifest" href="manifest.json" />
-    <meta name="msapplication-TileColor" content="#E1DEDD" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
     <meta
       name="msapplication-TileImage"
       content="assets/images/ms-icon-144x144.png"
     />
-    <meta name="theme-color" content="#E1DEDD" />
-    <meta name="description" content="Conheça a Ferrari Auto Center" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link href="manifest.json" rel="manifest" />
   </head>
-  <body class="">
+  <body>
     <header id="header">
-      <div class="overlay" data-close="menu"></div>
+      <div class="overlay"></div>
       <a href="index.html#home"
         ><img
           src="assets/images/ferrari-logo.svg"
-          alt="Logo Ferrari"
           class="logo"
+          alt="Logo Ferrari"
       /></a>
       <button type="button" id="btn-open">
         <svg
@@ -114,25 +120,17 @@
           />
         </svg>
       </button>
-      <div class="menu logged">
+      <div class="menu">
         <nav>
-          <button type="button" id="btn-close" data-close="menu">
+          <button type="button" id="btn-close">
             <svg
-              id="close-24px"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
             >
+              <path d="M0,0H24V24H0Z" fill="none" />
               <path
-                id="Caminho_244"
-                data-name="Caminho 244"
-                d="M0,0H24V24H0Z"
-                fill="none"
-              />
-              <path
-                id="Caminho_245"
-                data-name="Caminho 245"
                 d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"
               />
             </svg>
@@ -142,7 +140,9 @@
             <li><a href="index.html#service">Revisão</a></li>
             <li><a href="index.html#contact">Contato</a></li>
             <li class="divider"><hr /></li>
-            <li class="hide-guest"><a href="schedules.html">Agendamento</a></li>
+            <li class="hide-guest">
+              <a href="schedules.html">Agendamentos</a>
+            </li>
             <li class="hide-guest"><a href="profile.html">Editar Dados</a></li>
             <li class="hide-guest">
               <a href="change-photo.html">Mudar Foto</a>
@@ -160,7 +160,7 @@
                 ><img src="assets/images/user.png" alt="João Rangel"
               /></a>
             </picture>
-            <div class="login-user">
+            <div>
               <a href="profile.html">
                 <strong>João Rangel</strong>
                 <small>joaohcrangel@gmail.com</small>
@@ -186,52 +186,68 @@
       </div>
       <hr class="italy" />
     </header>
-    <section class="page blue" id="schedules-services">
+    <section id="schedules-address-form" class="page blue">
       <header>
-        <h1>ESCOLHA OS SERVIÇOS</h1>
+        <h1>Novo Endereço</h1>
       </header>
 
       <main>
-        <form>
-          <input type="hidden" name="schedule_at" />
-          <input type="hidden" name="option" />
+        <form action="schedules-summary.html">
+          <div class="fields zipcode">
+            <div class="field">
+              <input type="text" name="zipcode" id="zipcode" />
+              <label for="zipcode">CEP</label>
+            </div>
+            <div class="field">
+              <button type="button" id="btn-search">Buscar</button>
+            </div>
+          </div>
 
-          <div class="options"></div>
+          <div class="fields address-number">
+            <div class="field">
+              <input type="text" name="address" id="address" />
+              <label for="address">Endereço</label>
+            </div>
+
+            <div class="field">
+              <input type="text" name="number" id="number" />
+              <label for="number">Número</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <input type="text" name="complement" id="complement" />
+            <label for="complement">Complemento</label>
+          </div>
+
+          <div class="field">
+            <input type="text" name="district" id="district" />
+            <label for="district">Bairro</label>
+          </div>
+
+          <div class="field">
+            <input type="text" name="city" id="city" />
+            <label for="city">Cidade</label>
+          </div>
+
+          <div class="fields">
+            <div class="field">
+              <input type="text" name="state" id="state" />
+              <label for="state">Estado</label>
+            </div>
+
+            <div class="field">
+              <input type="text" name="country" id="country" />
+              <label for="country">País</label>
+            </div>
+          </div>
 
           <footer class="fixed">
-            <a href="javascript:history.back(-1)">Voltar</a>
-            <button type="submit">Continuar</button>
+            <a href="schedules-address.html">Voltar</a>
+            <button type="submit">Cadastrar</button>
           </footer>
         </form>
       </main>
-      <aside id="btn-aside">
-        <header>Resumo</header>
-        <section>
-          <table>
-            <tbody></tbody>
-          </table>
-        </section>
-        <footer>
-          <button type="button" id="button-open">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="64.317"
-              height="64.317"
-              viewBox="0 0 64.317 64.317"
-            >
-              <path d="M0,0H64.317V64.317H0Z" fill="none" />
-              <path
-                d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z"
-                transform="translate(10.079 13.439)"
-              />
-            </svg>
-          </button>
-          <div>
-            <span>Total</span>
-            <span class="total">R$: 0,00</span>
-          </div>
-        </footer>
-      </aside>
     </section>
     <script src="bundle.js"></script>
   </body>
